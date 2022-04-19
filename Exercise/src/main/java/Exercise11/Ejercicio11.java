@@ -13,6 +13,7 @@ public class Ejercicio11 {
         int u =0;
         System.out.println("Escriba una frase: ");
         String text = scanner.nextLine();
+        System.out.println("La frase: " + text + " tiene de longitud: " + text.length());
         for (int index = 0; index < text.length(); index++) {
                 if(text.charAt(index)=='a'){
                     a++;
