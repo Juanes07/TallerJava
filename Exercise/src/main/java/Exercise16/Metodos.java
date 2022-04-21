@@ -1,9 +1,11 @@
 package Exercise16;
 
 public class Metodos extends Persona {
+    Persona persona = new Persona();
     int negativo = -1;
     int bajoIdeal = 0;
     int sobreIdeal = 1;
+    int aleatorio = 0;
     boolean esMayor = false;
 
     public void calcularIMC(double peso, double altura){
@@ -18,6 +20,17 @@ public class Metodos extends Persona {
         }
     }
 
+    public void indicarEstadoPeso(float peso, float altura){
+        double pesoIdeal = peso / (altura * altura);
+        if(pesoIdeal < 20){
+            System.out.println("Peso ideal ");
+        } if (pesoIdeal >=20 && pesoIdeal<=25){
+            System.out.println("Debajo del Peso ideal ");
+        } if (pesoIdeal > 25) {
+            System.out.println("Sobrepeso");
+        }
+    }
+
     public boolean esMayorDeEdad(int edad){
         if(edad>= 18){
             esMayor = true;
@@ -28,4 +41,25 @@ public class Metodos extends Persona {
         }
         return esMayor;
     }
+
+    public void comprobarSexo(char sexo){
+        if(sexo == 'M'|| sexo == 'm'){
+            persona.setSexo('M');
+        } else{
+            persona.setSexo('H');
+        }
+    }
+
+    public int numeroAleatorio(){
+        return aleatorio = (int) (Math.random()* 10000000);
+    }
+
+
+    public  char calcularLetra(int dni){
+        char letras[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
+        int resto = dni%23;
+        return letras[resto];
+    }
+
+
 }
