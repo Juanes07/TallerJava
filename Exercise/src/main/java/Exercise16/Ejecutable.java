@@ -57,17 +57,13 @@ public class Ejecutable {
              * Creacion
              */
             Persona persona3 = new Persona();
-            persona3.setNombre("Sara");
-            persona3.setEdad(24);
-            persona3.setSexo('M');
-            persona3.setPeso(60);
-            persona3.setAltura(1.65f);
+
             /**
              * Validar peso en cada objeto
              */
             System.out.println("Persona 1: ");
             metodos.indicarEstadoPeso(persona1.peso, persona1.altura);
-            System.out.println("Persona 2: No Se obtiene  debido a no tener registro de su peso y altura");
+            System.out.println("Persona 2: ");
             metodos.indicarEstadoPeso(persona2.peso, persona2.altura);
             System.out.println("Persona 3: ");
             metodos.indicarEstadoPeso(persona3.peso, persona3.altura);
