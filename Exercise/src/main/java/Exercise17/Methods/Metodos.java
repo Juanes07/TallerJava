@@ -10,22 +10,29 @@ public class Metodos extends Electrodomestico {
     protected boolean letraEncontrada = false;
     protected boolean colorEncontrado = false;
 
-    public void comprobarConsumoEnergetico(char letra) {
-        if (listaLetras.equals(letra)) {
-            letraEncontrada = true;
-        } else {
-            this.getConsumoEnergetico();
+    public char comprobarConsumoEnergetico(char letra) {
+        for (char c : listaLetras) {
+            if (c == letra) {
+                letraEncontrada = true;
+            }
         }
-    }
-
-    public void comprobarColor(String color) {
-        if (listaColores.equals(color)) {
-            colorEncontrado = true;
-        } else {
-            this.getColor();
+        if (!letraEncontrada) {
+            letra = getConsumoEnergetico();
         }
+        return letra;
     }
 
 
-
+    public String comprobarColor(String color) {
+        for (String c : listaColores) {
+            if (c == color) {
+                colorEncontrado = true;
+                getColor();
+            }
+            if (!colorEncontrado) {
+                color = getColor();
+            }
+        }
+        return color;
+    }
 }

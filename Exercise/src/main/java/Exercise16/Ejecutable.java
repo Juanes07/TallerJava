@@ -55,7 +55,7 @@ public class Ejecutable {
         persona1.setSexo(sexo);
         persona1.setAltura(altura);
         persona1.setPeso(peso);
-        Persona persona2 = new Persona(nombre,edad,sexo);
+        Persona persona2 = new Persona(nombre, edad, sexo);
         persona2.setNombre(nombre);
         persona2.setEdad(edad);
         persona2.setSexo(sexo);

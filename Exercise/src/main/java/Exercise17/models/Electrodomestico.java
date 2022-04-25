@@ -1,10 +1,13 @@
 package Exercise17.models;
 
-public  class Electrodomestico {
+import Exercise16.Metodos;
+
+public class Electrodomestico {
     protected int precioBase = 100;
     protected String color = "blanco";
     protected char consumoEnergetico = 'F';
     protected int peso = 5;
+    Metodos metodos = new Metodos();
 
     public Electrodomestico() {
 
@@ -63,13 +66,16 @@ public  class Electrodomestico {
         }
 
 
-        if(peso >=0 && peso <20){
-            precio +=10;
-        } if (peso >=20 && peso <49){
+        if (peso >= 0 && peso < 20) {
+            precio += 10;
+        }
+        if (peso >= 20 && peso < 49) {
             precio += 50;
-        } if (peso >= 50 && peso <79){
+        }
+        if (peso >= 50 && peso < 79) {
             precio += 80;
-        } if (peso >=80){
+        }
+        if (peso >= 80) {
             precio += 100;
         }
         return precio;
@@ -78,9 +84,9 @@ public  class Electrodomestico {
     @Override
     public String toString() {
         return "Electrodomestico:" +
-                "precioBase=" + precioBase + " $"+
+                "precioBase=" + precioBase + " $" +
                 ", color='" + color + '\'' +
                 ", consumoEnergetico=" + consumoEnergetico +
-                ", peso=" + peso +" kg";
+                ", peso=" + peso + " kg";
     }
 }

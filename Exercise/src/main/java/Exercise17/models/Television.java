@@ -4,10 +4,11 @@ public class Television extends Electrodomestico {
     private Float resolucion = 20f;
     private Boolean sintonizadorTDT = false;
 
-    public Television(){
+    public Television() {
 
     }
-    public Television(int precio, int peso){
+
+    public Television(int precio, int peso) {
         this.precioBase = precio;
         this.peso = peso;
         this.resolucion = getResolucion();
@@ -16,7 +17,7 @@ public class Television extends Electrodomestico {
         this.consumoEnergetico = getConsumoEnergetico();
     }
 
-    public Television(float resolucion, boolean sintonizadorTDT){
+    public Television(float resolucion, boolean sintonizadorTDT) {
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
         this.precioBase = getPrecioBase();
