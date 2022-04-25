@@ -11,7 +11,7 @@ public class Ejercicio14 {
         int number;
         System.out.println("Escribe un numero cualquiera");
         number = scanner.nextInt();
-        for (int i = number; i <= 1000; i+=2) {
+        for (int i = number; i <= 1000; i += 2) {
             System.out.println(i);
         }
     }

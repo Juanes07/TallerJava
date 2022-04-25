@@ -11,7 +11,7 @@ public class Cinematographic {
         do {
             menu.showMenu();
             menuOption = scanner.nextInt();
-            switch (menuOption){
+            switch (menuOption) {
                 case 1:
                     break;
                 case 2:
@@ -29,7 +29,7 @@ public class Cinematographic {
                 default:
                     System.out.println("");
             }
-        } while (menuOption <8);
+        } while (menuOption < 8);
         menu.closeMenu();
     }
 }

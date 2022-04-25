@@ -2,39 +2,44 @@ package Exercise16;
 
 public class Persona {
     protected String nombre = "";
-    protected int edad = 0;
-    protected int DNI = 0;
+    protected Integer edad = 0;
+    protected Integer DNI = 0;
     protected char sexo = 'H';
-    protected float peso = 0;
-    protected float altura = 0;
+    protected Float peso = 0f;
+    protected Float altura = 0f;
 
     public Persona() {
 
     }
 
 
-
     public Persona(String nombre, int edad, char sexo) {
         this.nombre = nombre;
         this.edad = edad;
-        this.sexo = sexo;
+        if (sexo != 'H' || sexo != 'M') {
+            this.sexo = 'H';
+        } else {
+            this.sexo = sexo;
+        }
     }
 
-    public Persona(String nombre, int edad, int DNI, char sexo, float peso, float altura) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.DNI = DNI;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
-    }
 
     public Persona(String nombre, int edad, char sexo, float peso, float altura) {
+        this.nombre = getNombre();
+        this.edad = getEdad();
+        this.sexo = getSexo();
+        this.peso = getPeso();
+        this.altura = getAltura();
     }
 
-    public void setSexo(char sexo) {
+    public Persona(String nombre, Integer edad, char sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
         this.sexo = sexo;
+        this.peso = getPeso();
+        this.altura = getAltura();
     }
+
 
     @Override
     public String toString() {
@@ -42,7 +47,7 @@ public class Persona {
                 "nombre= " + nombre +
                 ", edad= " + edad +
                 ", DNI= " + DNI +
-                ", sexo= " + sexo +
+                ", sexo= " + this.sexo +
                 ", peso= " + peso +
                 ", altura =" + altura +
                 '}';
@@ -60,7 +65,31 @@ public class Persona {
         this.peso = peso;
     }
 
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
     public void setAltura(float altura) {
         this.altura = altura;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public Float getPeso() {
+        return peso;
+    }
+
+    public Float getAltura() {
+        return altura;
     }
 }

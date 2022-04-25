@@ -8,14 +8,14 @@ public class Ejercicio1y2 {
         int x = 20;
         int y = 10;
         try {
-            if(x < y){
+            if (x < y) {
                 System.out.println("X es menor a Y");
-            } else if (x == y){
+            } else if (x == y) {
                 System.out.println("X es igual a Y");
             } else if (x > y) {
                 System.out.println("X es mayor a Y");
             }
-        } catch (Exception exc){
+        } catch (Exception exc) {
             System.out.println("Verifica valores de X y Y");
         }
         try {
@@ -23,14 +23,14 @@ public class Ejercicio1y2 {
             int entrada1 = scanner.nextInt();
             System.out.println("Ingresa el valor de Y");
             int entrada2 = scanner.nextInt();
-            if(entrada1 < entrada2){
+            if (entrada1 < entrada2) {
                 System.out.println("X es menor a Y");
-            } else if (entrada1 == entrada2){
+            } else if (entrada1 == entrada2) {
                 System.out.println("X es igual a Y");
             } else if (entrada1 > entrada2) {
                 System.out.println("X es mayor a Y");
             }
-        } catch (Exception exception){
+        } catch (Exception exception) {
             System.out.println("Ingresa solo numeros");
         }
     }

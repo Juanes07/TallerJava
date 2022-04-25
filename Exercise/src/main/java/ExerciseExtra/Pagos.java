@@ -10,7 +10,7 @@ public class Pagos {
     int paybasic = 0;
     int payExtra = 0;
 
-    void basicPayment(){
+    void basicPayment() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cuantas horas trabajo la persona exactamente");
         hours = scanner.nextInt();
@@ -18,7 +18,7 @@ public class Pagos {
         System.out.println("Su pago total por esta semana es: " + paybasic + " $");
     }
 
-    void extraPayment(){
+    void extraPayment() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cuantas horas trabajo la persona exactamente");
         hours = scanner.nextInt();

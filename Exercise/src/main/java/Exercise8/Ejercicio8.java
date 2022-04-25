@@ -10,8 +10,8 @@ public class Ejercicio8 {
          */
         Scanner scanner = new Scanner(System.in);
         System.out.println("Escribe dia de la semana");
-        String  opcion = scanner.next().toUpperCase(Locale.ROOT);
-        switch (opcion){
+        String opcion = scanner.next().toUpperCase(Locale.ROOT);
+        switch (opcion) {
             case "LUNES":
                 System.out.println("dia laboral");
                 break;

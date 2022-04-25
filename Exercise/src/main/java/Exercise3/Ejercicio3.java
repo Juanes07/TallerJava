@@ -9,10 +9,10 @@ public class Ejercicio3 {
             System.out.println("Ingresa el valor del Radio");
             double radio = scanner.nextDouble();
 
-            double circuleArea = Math.PI * Math.pow(radio,2);
+            double circuleArea = Math.PI * Math.pow(radio, 2);
 
             System.out.println("EL area del circulo es: " + circuleArea);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("Ingresa solo numeros, en caso de error con decimales intenta con la coma o en caso contrario el punto");
         }
 

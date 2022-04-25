@@ -15,10 +15,10 @@ public class Ejercicio12 {
             System.out.println("Las frases son iguales");
         } else {
             for (int i = 0; i < phrase1.length(); i++) {
-                if(phrase1.charAt(i) == phrase2.charAt(i)) {
+                if (phrase1.charAt(i) == phrase2.charAt(i)) {
                     System.out.println("las letras iguales entre las frases son: " + phrase1.charAt(i));
                 }
-                if(phrase1.charAt(i) != phrase2.charAt(i)){
+                if (phrase1.charAt(i) != phrase2.charAt(i)) {
                     System.out.println("las letras diferentes entre las frases son: " + phrase1.charAt(i));
                 }
             }

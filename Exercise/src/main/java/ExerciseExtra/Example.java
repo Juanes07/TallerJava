@@ -6,7 +6,7 @@ public class Example {
         Pagos pagos;
         pagos = new Pagos();
         boolean payExtra = true;
-        if(payExtra == false){
+        if (payExtra == false) {
             pagos.basicPayment();
         }
         pagos.extraPayment();

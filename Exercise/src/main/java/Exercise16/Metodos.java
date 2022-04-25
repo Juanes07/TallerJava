@@ -2,37 +2,41 @@ package Exercise16;
 
 public class Metodos extends Persona {
     Persona persona = new Persona();
-    int negativo = -1;
-    int bajoIdeal = 0;
-    int sobreIdeal = 1;
-    int aleatorio = 0;
-    boolean esMayor = false;
+    Integer negativo = -1;
+    Integer bajoIdeal = 0;
+    Integer sobreIdeal = 1;
+    Integer aleatorio = 0;
+    Boolean esMayor = false;
 
-    public void calcularIMC(double peso, double altura){
+    public void calcularIMC(double peso, double altura) {
         double pesoIdeal = peso / (altura * altura);
         System.out.println(pesoIdeal);
-        if(pesoIdeal < 20){
+        if (pesoIdeal < 20) {
             System.out.println(negativo);
-        } if (pesoIdeal >=20 && pesoIdeal<=25){
+        }
+        if (pesoIdeal >= 20 && pesoIdeal <= 25) {
             System.out.println(bajoIdeal);
-        } if (pesoIdeal > 25) {
+        }
+        if (pesoIdeal > 25) {
             System.out.println(sobreIdeal);
         }
     }
 
-    public void indicarEstadoPeso(float peso, float altura){
+    public void indicarEstadoPeso(float peso, float altura) {
         double pesoIdeal = peso / (altura * altura);
-        if(pesoIdeal < 20){
+        if (pesoIdeal < 20) {
             System.out.println("Peso ideal ");
-        } if (pesoIdeal >=20 && pesoIdeal<=25){
+        }
+        if (pesoIdeal >= 20 && pesoIdeal <= 25) {
             System.out.println("Debajo del Peso ideal ");
-        } if (pesoIdeal > 25) {
+        }
+        if (pesoIdeal > 25) {
             System.out.println("Sobrepeso");
         }
     }
 
-    public boolean esMayorDeEdad(int edad){
-        if(edad>= 18){
+    public boolean esMayorDeEdad(int edad) {
+        if (edad >= 18) {
             esMayor = true;
             System.out.println(esMayor);
         } else {
@@ -42,22 +46,22 @@ public class Metodos extends Persona {
         return esMayor;
     }
 
-    public void comprobarSexo(char sexo){
-        if(sexo == 'M'|| sexo == 'm'){
+    public void comprobarSexo(char sexo) {
+        if (sexo == 'M' || sexo == 'm') {
             persona.setSexo('M');
-        } else{
-            persona.setSexo('H');
+        } else {
+            persona.getSexo();
         }
     }
 
-    public int numeroAleatorio(){
-        return aleatorio = (int) (Math.random()* 10000000);
+    public int numeroAleatorio() {
+        return aleatorio = (int) (Math.random() * 10000000);
     }
 
 
-    public  char calcularLetra(int dni){
-        char letras[] = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
-        int resto = dni%23;
+    public char calcularLetra(int dni) {
+        char letras[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        int resto = dni % 23;
         return letras[resto];
     }
 

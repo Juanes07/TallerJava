@@ -9,7 +9,7 @@ public class Ejercicio7 {
         do {
             System.out.println("Ingrese un numero cualquiera");
             number = scanner.nextFloat();
-        } while (number>=0);
+        } while (number >= 0);
         System.out.println("El numero elegido fue: " + number);
     }
 }
