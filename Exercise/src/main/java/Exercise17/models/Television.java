@@ -5,7 +5,11 @@ public class Television extends Electrodomestico {
     private Boolean sintonizadorTDT = false;
 
     public Television() {
-
+        this.color = getColor();
+        this.peso = getPeso();
+        this.consumoEnergetico = getConsumoEnergetico();
+        this.precioBase = getPrecioBase();
+        this.resolucion = getResolucion();
     }
 
     public Television(int precio, int peso) {

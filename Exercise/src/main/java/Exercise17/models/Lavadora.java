@@ -8,7 +8,11 @@ public class Lavadora extends Electrodomestico {
 
     //contrusctor por defecto
     public Lavadora() {
-
+        this.color = getColor();
+        this.peso = getPeso();
+        this.precioBase = getPrecioBase();
+        this.consumoEnergetico = getConsumoEnergetico();
+        this.carga = getCarga();
     }
 
     //constructor con atriubos por defecto de la clase electrodomestico, agregando atributos precio y peso
