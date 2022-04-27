@@ -1,7 +1,9 @@
 package Exercise16;
 
 public class Preguntas {
-
+    /**
+     * Metodos para impresion de preguntas
+     */
     public void pedirEdad() {
         System.out.println("Ingresa Tu edad (Solo numeros): ");
     }

@@ -7,10 +7,12 @@ public class Electrodomestico {
     protected String color = "blanco";
     protected char consumoEnergetico = 'F';
     protected int peso = 5;
-    Metodos metodos = new Metodos();
 
     public Electrodomestico() {
-
+        this.precioBase = getPrecioBase();
+        this.peso = getPeso();
+        this.consumoEnergetico = getConsumoEnergetico();
+        this.color = getColor();
     }
 
     public Electrodomestico(int precioBase, int peso) {
@@ -64,8 +66,6 @@ public class Electrodomestico {
             default:
                 System.out.println("no se encontro El consumo adecuado");
         }
-
-
         if (peso >= 0 && peso < 20) {
             precio += 10;
         }

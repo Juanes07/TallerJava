@@ -9,12 +9,30 @@ import java.util.ArrayList;
 
 public class Ejecutable {
     public static void main(String[] args) {
+
+        /**
+         * creando array de electrodomesticos
+         */
         Electrodomestico[] array;
+        array = new Electrodomestico[10];
+
+        /**
+         * variables
+         */
+
         int sumaTotalPreciosElectrodomesticos = 0;
         int sumaTotalPreciosTelevision = 0;
         int sumaTotalPreciosLavadora = 0;
+
+        /**
+         * iniciando objeto metodos de tipo Metodos
+         */
+
         Metodos metodos = new Metodos();
-        array = new Electrodomestico[10];
+
+        /**
+         * Creacion de objetos de tipo Electrodomestico, Television y Lavadora.
+         */
 
         array[0] = new Electrodomestico(100, "blanco", metodos.comprobarConsumoEnergetico('Z'), 100);
         array[1] = new Electrodomestico(150, metodos.comprobarColor("amarillo"), 'B', 40);
@@ -27,6 +45,9 @@ public class Ejecutable {
         array[8] = new Lavadora(100, 45);
         array[9] = new Television(27, false);
 
+        /**
+         * Impresion del precio baje de los objetos anteriormente creados
+         */
 
         System.out.println("precio base Electrodomesticos 1: " + array[0].getPrecioBase() + " $" + "\n");
         System.out.println("precio base Electrodomesticos 2: " + array[1].getPrecioBase() + " $" + "\n");
@@ -39,6 +60,10 @@ public class Ejecutable {
         System.out.println("precio base Lavadora 3: " + array[8].getPrecioBase() + " $" + "\n");
         System.out.println("precio base Television 3: " + array[9].getPrecioBase() + " $" + "\n");
 
+        /**
+         *  Suma de los precios totales de los electrodomesticos
+         */
+
         sumaTotalPreciosElectrodomesticos =
                 array[0].precioFinal(array[0].getPrecioBase(), array[0].getConsumoEnergetico(), array[0].getPeso()) +
                         array[1].precioFinal(array[1].getPrecioBase(), array[1].getConsumoEnergetico(), array[1].getPeso()) +
@@ -46,9 +71,17 @@ public class Ejecutable {
 
         System.out.println("Precio Total de electrodomesticos: " + sumaTotalPreciosElectrodomesticos + " $");
 
+        /**
+         *  Suma de los precios totales de Lavadoras
+         */
+
         sumaTotalPreciosLavadora = array[3].precioFinal(array[3].getPrecioBase(), array[3].getConsumoEnergetico(), array[3].getPeso()) +
                 array[6].precioFinal(array[6].getPrecioBase(), array[6].getConsumoEnergetico(), array[6].getPeso()) +
                 array[8].precioFinal(array[8].getPrecioBase(), array[8].getConsumoEnergetico(), array[8].getPeso());
+
+        /**
+         *  Suma de los precios totales de Television
+         */
 
         System.out.println("Precio Total de Lavadoras: " + sumaTotalPreciosLavadora + " $");
 

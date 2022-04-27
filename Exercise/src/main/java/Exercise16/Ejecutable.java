@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Ejecutable {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Metodos metodos = new Metodos();
         Preguntas preguntas = new Preguntas();
+        Persona persona = new Persona();
         String nombre = "";
         Integer edad;
-        char sexo;
+        String sexo;
         Float peso;
         Float altura;
         Integer numeroAleatorio;
@@ -18,15 +18,16 @@ public class Ejecutable {
 
         /**
          * Metodo calcular IMC devuelve -1 pedo ideal, 0 debajo del peso y un 1 si esta con sobrepeso
+         * comentado debido a que no debe ser visible segundo el ejercicio pero esta para comprobar el
+         * funcionamiento del metodo
          */
 
-//        metodos.calcularIMC(65.0,1.70);
+        // metodos.calcularIMC(65.0, 1.70);
 
         /**
          * Metodos para generar el DNI. No es visible a exterior
          */
-        numeroAleatorio = metodos.numeroAleatorio();
-        letra = metodos.calcularLetra(numeroAleatorio);
+
 
         /**
          * En caso de comprobar el funcionamiento del DNI aleatorio este es el codigo:
@@ -36,55 +37,64 @@ public class Ejecutable {
         /**
          * Inicia programa
          */
+
         preguntas.pedirNombre();
         nombre = scanner.nextLine();
         preguntas.pedirEdad();
         edad = scanner.nextInt();
         preguntas.pedirSexo();
-        sexo = scanner.next().charAt(0);
+        sexo = scanner.next();
         preguntas.pedirPeso();
         peso = scanner.nextFloat();
         preguntas.pedirAltura();
         altura = scanner.nextFloat();
+
         /**
          * Creacion de objetos Persona
          */
-        Persona persona1 = new Persona(nombre, edad, sexo, peso, altura);
-        persona1.setNombre(nombre);
-        persona1.setEdad(edad);
-        persona1.setSexo(sexo);
-        persona1.setAltura(altura);
-        persona1.setPeso(peso);
+        Persona persona1 = new Persona(nombre,edad,sexo,peso,altura);
+
         Persona persona2 = new Persona(nombre, edad, sexo);
-        persona2.setNombre(nombre);
-        persona2.setEdad(edad);
-        persona2.setSexo(sexo);
+
+
         /**
          * Creacion de Objeto Persona por defecto
          */
+
         Persona persona3 = new Persona();
+        persona3.setNombre("Alex");
+        persona3.setEdad(10);
+        persona3.setSexo("H");
+        persona3.setPeso(65f);
+        persona3.setAltura(1.70f);
+
 
         /**
          * Validar peso en cada objeto
          */
+
         preguntas.persona1();
-        metodos.indicarEstadoPeso(persona1.peso, persona1.altura);
+        persona1.mostrarCondicionPeso();
         preguntas.persona2();
-        metodos.indicarEstadoPeso(persona2.peso, persona2.altura);
+        persona2.mostrarCondicionPeso();
         preguntas.persona3();
-        metodos.indicarEstadoPeso(persona3.peso, persona3.altura);
+        persona3.mostrarCondicionPeso();
+
         /**
          * Validar si son mayores de edad
          */
+
         preguntas.esMayor1();
-        metodos.esMayorDeEdad(persona1.edad);
+        persona1.esMayorDeEdad(persona1.edad);
         preguntas.esMayor2();
-        metodos.esMayorDeEdad(persona2.edad);
+        persona2.esMayorDeEdad(persona2.edad);
         preguntas.esMayor3();
-        metodos.esMayorDeEdad(persona3.edad);
+        persona3.esMayorDeEdad(persona3.edad);
+
         /**
          * Mostrar Informacion de cada Persona
          */
+
         System.out.println("Datos persona1: " + persona1.toString());
         System.out.println("Datos persona2: " + persona2.toString());
         System.out.println("Datos persona3: " + persona3.toString());
