@@ -1,33 +1,41 @@
 package Exercise17.models;
 
 public class Television extends Electrodomestico {
-    private Float resolucion = 20f;
-    private Boolean sintonizadorTDT = false;
+    private Float resolucion;
+    private Boolean sintonizadorTDT;
 
     public Television() {
-        this.color = getColor();
-        this.peso = getPeso();
-        this.consumoEnergetico = getConsumoEnergetico();
-        this.precioBase = getPrecioBase();
-        this.resolucion = getResolucion();
+        this.color = "blanco";
+        this.peso = 5;
+        this.consumoEnergetico = 'F';
+        this.precioBase = 100;
+        this.resolucion = 20f;
     }
 
-    public Television(int precio, int peso) {
-        this.precioBase = precio;
+    public Television(int precioBase, int peso) {
+        this.precioBase = precioBase;
         this.peso = peso;
-        this.resolucion = getResolucion();
-        this.color = getColor();
-        this.sintonizadorTDT = getSintonizadorTDT();
-        this.consumoEnergetico = getConsumoEnergetico();
+        this.resolucion = 20f;
+        this.color = "blanco";
+        this.sintonizadorTDT = false;
+        this.consumoEnergetico = 'F';
     }
 
     public Television(float resolucion, boolean sintonizadorTDT) {
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
-        this.precioBase = getPrecioBase();
-        this.peso = getPeso();
-        this.consumoEnergetico = getConsumoEnergetico();
-        this.color = getColor();
+        this.precioBase = 100;
+        this.peso = 5;
+        this.consumoEnergetico = 'F';
+        this.color = "blanco";
+    }
+
+    @Override
+    public int precioFinal() {
+        if(this.resolucion > 40 && this.sintonizadorTDT == true){
+            this.precioBase += (30*this.precioBase)/100 + 50;
+        }
+        return super.precioFinal();
     }
 
     public Float getResolucion() {

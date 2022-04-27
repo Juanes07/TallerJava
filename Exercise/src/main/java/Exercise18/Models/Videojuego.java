@@ -8,7 +8,6 @@ public class Videojuego implements Entregable {
     Boolean entregado = false;
     String genero = " ";
     String compañia = " ";
-    int resultadoComparacion = 0;
 
 
     public Videojuego() {

@@ -1,34 +1,33 @@
 package Exercise17.models;
 
-import Exercise17.Methods.Metodos;
 
 public class Lavadora extends Electrodomestico {
-    private int carga = 5;
-    Metodos metodos = new Metodos();
+    private int carga;
 
     //contrusctor por defecto
     public Lavadora() {
-        this.color = getColor();
-        this.peso = getPeso();
-        this.precioBase = getPrecioBase();
-        this.consumoEnergetico = getConsumoEnergetico();
-        this.carga = getCarga();
+        this.color = "blanco";
+        this.peso = 5;
+        this.precioBase = 100;
+        this.consumoEnergetico = 'F';
+        this.carga = 5;
     }
 
     //constructor con atriubos por defecto de la clase electrodomestico, agregando atributos precio y peso
-    public Lavadora(int precio, int peso) {
-        this.precioBase = precio;
+    public Lavadora(int precioBase, int peso) {
+        this.precioBase = precioBase;
         this.peso = peso;
-        this.consumoEnergetico = getConsumoEnergetico();
-        this.color = getColor();
+        this.consumoEnergetico = 'F';
+        this.color = "blanco";
+        this.carga = 5;
     }
 
     public Lavadora(int carga) {
         this.carga = carga;
-        this.peso = getPeso();
-        this.consumoEnergetico = getConsumoEnergetico();
-        this.precioBase = getPrecioBase();
-        this.color = getColor();
+        this.consumoEnergetico = 'F';
+        this.peso = 5;
+        this.color = "blanco";
+        this.precioBase = 100;
     }
 
 
@@ -36,14 +35,15 @@ public class Lavadora extends Electrodomestico {
         return carga;
     }
 
-    @Override
-    public int precioFinal(int precio, char letra, int peso) {
-        if (peso > 30) {
-            precio += 50;
+
+    public int precioFinal() {
+        if (this.carga > 30) {
+            this.precioBase += 50;
         } else {
-            precio += 0;
+            this.precioBase += 0;
         }
-        return precio;
+
+        return super.precioFinal();
     }
 
     @Override
@@ -55,4 +55,6 @@ public class Lavadora extends Electrodomestico {
                 ", peso=" + peso + " kg" +
                 ", carga=" + carga;
     }
+
+
 }

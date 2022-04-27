@@ -8,7 +8,6 @@ public class Serie implements Entregable {
     Boolean entregado = false;
     String genero = " ";
     String creador = " ";
-    int resultadoComparacion = 0;
 
 
     public Serie() {
