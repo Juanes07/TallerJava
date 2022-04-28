@@ -3,26 +3,26 @@ package Exercise18.Models;
 import Exercise18.Entregable;
 
 public class Serie implements Entregable {
-    String titulo = " ";
-    Integer numberoDeTemporadas = 3;
-    Boolean entregado = false;
-    String genero = " ";
-    String creador = " ";
+    protected String titulo;
+    protected Integer numberoDeTemporadas = 3;
+    protected Boolean entregado = false;
+    protected String genero = " ";
+    protected String creador = " ";
 
 
     public Serie() {
-        this.creador = getCreador();
-        this.genero = getGenero();
-        this.numberoDeTemporadas = getNumberoDeTemporadas();
-        this.titulo = getTitulo();
+        this.creador = " ";
+        this.genero = " ";
+        this.numberoDeTemporadas = 3;
+        this.titulo = " ";
     }
 
 
     public Serie(String titulo, String creador) {
         this.titulo = titulo;
         this.creador = creador;
-        this.numberoDeTemporadas = getNumberoDeTemporadas();
-        this.genero = getGenero();
+        this.numberoDeTemporadas = 3;
+        this.genero = " ";
     }
 
     public Serie(String titulo, String creador, String genero, int numberoDeTemporadas) {

@@ -3,25 +3,25 @@ package Exercise18.Models;
 import Exercise18.Entregable;
 
 public class Videojuego implements Entregable {
-    String titulo = " ";
-    Integer horasEstimadas = 10;
-    Boolean entregado = false;
-    String genero = " ";
-    String compañia = " ";
+    protected String titulo;
+    protected Integer horasEstimadas;
+    protected Boolean entregado;
+    protected String genero;
+    protected String compañia;
 
 
     public Videojuego() {
-        this.compañia = getCompañia();
-        this.genero = getGenero();
-        this.horasEstimadas = getHorasEstimadas();
-        this.titulo = getTitulo();
+        this.compañia = " ";
+        this.genero = " ";
+        this.horasEstimadas = 10;
+        this.titulo = "titulo";
     }
 
     public Videojuego(String titulo, int horasEstimadas) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
-        this.genero = getGenero();
-        this.compañia = getCompañia();
+        this.genero = " ";
+        this.compañia = " ";
     }
 
     public Videojuego(String titulo, int horasEstimadas, String genero, String compañia) {
@@ -41,7 +41,6 @@ public class Videojuego implements Entregable {
         }
         return 0;
     }
-
 
 
     public String getTitulo() {
